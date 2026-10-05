@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Marktext-style headings & inline elements for Obsidian
+   Colors copied 1:1 from the MkDocs Material "extra.css" (Monokai Pro-inspired
+   palette) used on the docs site, so Obsidian matches Oh My Marktext exactly.
+   Works in both Live Preview and Reading view.
+   ========================================================================== */
+
+/* --- Palette (source of truth: extra.css, "slate" scheme) --- */
+:root {
+  --mt-h1-color: #ED6C89;   /* pink/red */
+  --mt-h2-color: #F9DA78;   /* yellow   */
+  --mt-h3-color: #B4DB82;   /* green    */
+  --mt-h4-color: #91DAE6;   /* cyan     */
+  --mt-h5-color: #A99EEC;   /* purple   */
+  --mt-h6-color: #EE9D70;   /* orange   */
+
+  --mt-em-color: #F9DA78;      /* italics -> yellow, same as h2 */
+  --mt-accent-color: #FC9867;  /* blockquote bar / accent */
+  --mt-code-fg: #fcebb6;
+  --mt-code-bg: #221F22;
+
+  /* --- LINKS -------------------------------------------------------
+     Same two colors used in extra.css (the web CSS), so links match
+     across the web site and all 3 Obsidian view modes.
+     Only ONE color for links (visited = not visited, on purpose) and
+     ONE color for hover. */
+  --mt-link-color: #5CA8E8;        /* link color (normal = visited) */
+  --mt-link-hover-color: #FC9867;  /* link color on hover (= accent) */
+}
+
+/* Obsidian's built-in link variables. These drive the color of real
+   <a> tags, which is what Reading View uses, and what Live Preview
+   uses for internal/external links once a line is not being edited. */
+:root {
+  --link-color: var(--mt-link-color);
+  --link-color-hover: var(--mt-link-hover-color);
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-external-color: var(--mt-link-color);
+  --link-external-color-hover: var(--mt-link-hover-color);
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+}
+
+/* --- BACKGROUND ----------------------------------------------------------
+   Match the web site's dark grey (Monokai Pro bg, --md-default-bg-color in
+   extra.css) instead of Obsidian's default near-black.
+   - background-primary   = main note area (editor + reading view)
+   - background-secondary = sidebars / side panes
+   (same 2-tone split extra.css uses: page bg vs header/nav bg) */
+:root {
+  --background-primary: #2D2A2E !important;       /* = --md-default-bg-color in extra.css */
+  --background-primary-alt: #2D2A2E !important;
+  --background-secondary: #221F22 !important;     /* = --md-primary-fg-color in extra.css (sidebar/header) */
+  --background-secondary-alt: #221F22 !important;
+}
+
+/* --- BODY TEXT COLOR -------------------------------------------------
+   Dims the default near-white body text. IMPORTANT: this must be set
+   on `body`, not on `:root`/`html`. Obsidian's own theme defines
+   --text-normal directly on the `body` element (app.css), and a
+   same-element declaration always wins over one merely inherited from
+   an ancestor like :root — regardless of !important. Putting it on
+   :root looked correct but silently did nothing, because the two
+   rules never actually compete for the same element. */
+body {
+  --text-normal: #B3B3B3 !important;
+}
+
+/* Belt-and-braces: some themes read the variable once and also paint the
+   surface directly rather than living off the custom property, so paint
+   the actual panes too in case the variables above get ignored. */
+body.app,
+.workspace,
+.workspace-tabs,
+.workspace-leaf-content,
+.markdown-source-view,
+.markdown-preview-view,
+.markdown-rendered,
+.cm-editor,
+.cm-scroller {
+  background-color: #2D2A2E !important;
+}
+
+.workspace-ribbon,
+.workspace-tab-header-container,
+.side-dock-ribbon,
+.mod-left-split .workspace-leaf-content,
+.mod-right-split .workspace-leaf-content,
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background-color: #221F22 !important;
+}
+
+/* --- Heading sizes + colors --- */
+.markdown-source-view.mod-cm6 .cm-header-1,
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  color: var(--mt-h1-color) !important;
+  font-size: 1.9em !important;
+  font-weight: 700 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-2,
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+  color: var(--mt-h2-color) !important;
+  font-size: 1.6em !important;
+  font-weight: 700 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-3,
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  color: var(--mt-h3-color) !important;
+  font-size: 1.35em !important;
+  font-weight: 700 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-4,
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  color: var(--mt-h4-color) !important;
+  font-size: 1.15em !important;
+  font-weight: 700 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+  color: var(--mt-h5-color) !important;
+  font-size: 1.05em !important;
+  font-weight: 700 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header-6,
+.markdown-preview-view h6,
+.markdown-rendered h6 {
+  color: var(--mt-h6-color) !important;
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  opacity: 0.9;
+}
+
+/* --- Color the "#" markdown syntax tokens to match their heading level --- */
+.cm-formatting-header-1 { color: var(--mt-h1-color) !important; }
+.cm-formatting-header-2 { color: var(--mt-h2-color) !important; }
+.cm-formatting-header-3 { color: var(--mt-h3-color) !important; }
+.cm-formatting-header-4 { color: var(--mt-h4-color) !important; }
+.cm-formatting-header-5 { color: var(--mt-h5-color) !important; }
+.cm-formatting-header-6 { color: var(--mt-h6-color) !important; }
+
+/* --- Italics -> yellow (was showing as the theme's default purple) --- */
+.markdown-source-view.mod-cm6 .cm-em,
+.markdown-preview-view em,
+.markdown-rendered em {
+  color: var(--mt-em-color) !important;
+}
+
+/* --- Blockquotes: colored left bar, like the ">" highlight style --- */
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--mt-accent-color) !important;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* --- Inline code --- */
+.markdown-source-view.mod-cm6 .cm-inline-code,
+.markdown-preview-view code,
+.markdown-rendered code {
+  color: var(--mt-code-fg) !important;
+  background-color: var(--mt-code-bg) !important;
+}
+
+/* --- Links -----------------------------------------------------------
+   Covers all 3 Obsidian modes. Reading View and Source Mode both fall
+   into line with the generic selectors below. Live Preview has turned
+   out to be the stubborn one - it seems to color its rendered links
+   through a more specific internal rule, so on top of the generic
+   selectors we repeat them scoped to the Live Preview editor itself
+   (.markdown-source-view.mod-cm6, like the headings above do) to win
+   on specificity, and cover a few extra class names Live Preview is
+   known to use for the rendered link widget.
+   --------------------------------------------------------------------- */
+
+/* Reading View + Source Mode + any plain <a> link elements anywhere */
+.markdown-preview-view a,
+.markdown-rendered a,
+a.internal-link,
+a.external-link,
+.cm-link,
+.cm-hmd-internal-link,
+.cm-hmd-barelink,
+.cm-url {
+  color: var(--mt-link-color) !important;
+  text-decoration: none !important;
+}
+
+.markdown-preview-view a:hover,
+.markdown-rendered a:hover,
+a.internal-link:hover,
+a.external-link:hover,
+.cm-link:hover,
+.cm-hmd-internal-link:hover,
+.cm-hmd-barelink:hover,
+.cm-url:hover {
+  color: var(--mt-link-hover-color) !important;
+  text-decoration: none !important;
+}
+
+/* Live Preview, scoped explicitly to the editor pane (higher specificity
+   than the bare selectors above, in case Live Preview's own rule is
+   more specific and would otherwise win) */
+.markdown-source-view.mod-cm6 .cm-link,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .cm-hmd-barelink,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 a.internal-link,
+.markdown-source-view.mod-cm6 a.external-link,
+.markdown-source-view.mod-cm6 .cm-underline {
+  color: var(--mt-link-color) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-link:hover,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.markdown-source-view.mod-cm6 .cm-hmd-barelink:hover,
+.markdown-source-view.mod-cm6 .cm-url:hover,
+.markdown-source-view.mod-cm6 a.internal-link:hover,
+.markdown-source-view.mod-cm6 a.external-link:hover {
+  color: var(--mt-link-hover-color) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* The "[", "]", "(", ")" formatting marks around a link - visible in
+   Source Mode, and in Live Preview while the cursor is on that line.
+   Colored the same as the link instead of the theme's muted grey. */
+.cm-formatting-link,
+.cm-formatting-link-string {
+  color: var(--mt-link-color) !important;
+}
