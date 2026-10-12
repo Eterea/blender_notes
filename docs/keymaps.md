@@ -46,7 +46,7 @@ Compiled and shared by [Cristóbal Vila](https://etereaestudios.com/resources/bl
 
 **Save & Load** > Blend Files > Save Versions > *Change from 1 to 0* (to disable that .blend1 extra files)
 
-**Save & Load** > Blend Files > *Disable Auto Run Python Scripts* (is Disabled by Default) - 🔴
+**Save & Load** > Blend Files > *Disable Auto Run Python Scripts* (is Disabled by Default)
 
 **File Paths** > Asset Libraries > `/Users/cristobal/Library/Application Support/Blender/5.x/nodes/...`
 
