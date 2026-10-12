@@ -24,7 +24,7 @@ Compiled and shared by [Cristóbal Vila](https://etereaestudios.com/resources/bl
 
 `cristobal › AppData[#] › Roaming Blender Foundation › Blender › [version]`
 
-NOTE: to locate this in Windows go to Search field (bottom-left), write `execute` (`ejecutar`) and then write `%appdata%`
+NOTE: to locate this in Windows go to Search field (bottom-left), write `execute` (`ejecutar`), then ENTER and then write `%appdata%`
 
 ### To open a second instance of Blender in Mac
 

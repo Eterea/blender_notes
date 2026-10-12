@@ -100,7 +100,7 @@
               "type": "backlink",
               "state": {
                 "file": "docs/addons.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -170,12 +170,12 @@
               "title": "Outline"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,12 +190,17 @@
   },
   "active": "289a3c3e038c4878",
   "lastOpenFiles": [
-    "docs/index.md",
-    "docs/keymaps.md",
     "docs/links.md",
     "docs/tips.md",
+    "docs/addons.md",
+    "docs/index.md",
+    "docs/keymaps.md",
+    "docs/Cillas, Cortillas y Sasa desde Bergua.md",
+    "docs/misc.md",
+    "docs/to_do_A.md",
+    "to_do_A.md",
+    "docs/20261001_Forja_Beta_Cristóbal.md",
     "readme.md",
-    "setup_steps_by_claude.md",
-    "docs/addons.md"
+    "setup_steps_by_claude.md"
   ]
 }
