@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#0000CC",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
