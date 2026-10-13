@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/keymaps.md",
+                "file": "docs/addons.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "keymaps"
+              "title": "addons"
             }
           }
         ]
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/keymaps.md",
+                "file": "docs/addons.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,11 +190,11 @@
   },
   "active": "289a3c3e038c4878",
   "lastOpenFiles": [
+    "docs/keymaps.md",
     "docs/addons.md",
     "docs/links.md",
     "docs/tips.md",
     "docs/index.md",
-    "docs/keymaps.md",
     "docs/Cillas, Cortillas y Sasa desde Bergua.md",
     "docs/misc.md",
     "docs/to_do_A.md",

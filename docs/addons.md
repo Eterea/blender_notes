@@ -356,9 +356,12 @@ To update ([steps](https://ke-code.xyz/scripts/wiki.html)) - To avoid potential 
 [Higgsas Blender Geometry Nodes Groups Toolset Pack](https://higgsas.gumroad.com/l/wrusot) - *USD 10* - [Manual 0.1 documentation](https://higgsas-geo-nodes-manual.readthedocs.io/en/latest/) - (Higgsas) Geometry Nodes Groups Blender 3.3/4.4 - Tutorials, Tips and Tricks at [Blender Artists Community.](https://blenderartists.org/t/higgsas-geometry-nodes-groups-blender-3-3-4-4/1351737)
 
 [Geometry Nodes Building Blocks Toolkit](https://shmueldisrl.gumroad.com/l/pxpdx?layout=profile) - *USD 10* - By Shmuel Israel - Functionality you wouldn't get with only the built-in nodes. They will cover most basic node types to create most average node structures one step above the default.
+
 [PatternMaker](https://blendermarket.com/products/patternmaker/) *USD 10* - “Almost” like having Substance Designer inside Blender - [Docs](https://blendermarket.com/products/patternmaker/docs)
+
 [Numeric Attribute Visualizer in Geometry Nodes](https://ilirbeqiri.gumroad.com/l/xxjuix) - Ilir Beqiri - *USD 5* - **Purchased (not installed, stored)**
 
+[A3D Procedural Generation Toolkit for Blender Geometry Nodes](https://ashlee3dee.gumroad.com/l/A3D_ProcgenToolkit) - *USD 10* - By [Ashlee](https://x.com/ashlee3dee) - [Node Reference & Documentation](https://ashlee3dee.github.io/a3d_procgen_toolkit/) - 🔴
 #### Free Custom Nodes
 
 [b3dsdf](https://github.com/williamchange/b3dsdf/releases) - Toolkit of SDFs/vector utility nodes made by Celestialmaze - [GitHub](https://github.com/williamchange/b3dsdf) - [Wiki Examples](https://github.com/williamchange/b3dsdf/wiki/Examples) - Install as any add-on (not using Asset Browser System)
