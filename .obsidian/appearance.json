@@ -1,5 +1,7 @@
 {
   "enabledCssSnippets": [
     "marktext-style-headings"
-  ]
+  ],
+  "cssTheme": "",
+  "theme": "system"
 }

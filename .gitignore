@@ -4,6 +4,9 @@
 # Obsidian (local editor config — personal settings, not project content)
 docs/.obsidian/
 
+# Obsidian workspace state (open tabs, pane layout) — changes every session
+.obsidian/workspace.json
+
 # VS Code (local editor config, in case it's ever used inside this repo)
 .vscode/
 

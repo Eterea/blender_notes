@@ -241,3 +241,58 @@ a.external-link:hover,
 .cm-formatting-link-string {
   color: var(--mt-link-color) !important;
 }
+
+/* ==========================================================================
+   PDF EXPORT (print) FIX
+   --------------------------------------------------------------------------
+   When exporting to PDF, Obsidian renders the note inside a `.print`
+   container and switches to its LIGHT variables (the theme sets
+   --text-normal to near-black for light mode). The `body { --text-normal }`
+   rule above never reaches that container, so regular text came out black
+   on our dark background. Headings were fine because they use hard-coded
+   colors. Here we set the body text color explicitly for print.
+   ========================================================================== */
+@media print {
+  /* Keep the dark background in the PDF (browsers drop backgrounds
+     in print unless this is set). */
+  html, body, .print, .print .markdown-preview-view, .print .markdown-rendered {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: #2D2A2E !important;
+  }
+
+  /* Re-declare the variable on the same element that Obsidian overrides. */
+  body, .print, .print .markdown-preview-view, .print .markdown-rendered {
+    --text-normal: #B3B3B3 !important;
+    --text-muted: #B3B3B3 !important;
+    color: #B3B3B3 !important;
+  }
+
+  /* Regular text elements (headings, links, em and code keep their own colors). */
+  .print .markdown-rendered p,
+  .print .markdown-rendered li,
+  .print .markdown-rendered ul,
+  .print .markdown-rendered ol,
+  .print .markdown-rendered td,
+  .print .markdown-rendered th,
+  .print .markdown-rendered strong,
+  .print .markdown-rendered span,
+  .print .markdown-rendered div,
+  .print .markdown-rendered blockquote,
+  .print .task-list-item,
+  .print .list-bullet {
+    color: #B3B3B3 !important;
+  }
+
+  /* Re-assert colors that the generic rules above would otherwise flatten. */
+  .print .markdown-rendered em { color: var(--mt-em-color) !important; }
+  .print .markdown-rendered a,
+  .print .markdown-rendered a span { color: var(--mt-link-color) !important; }
+  .print .markdown-rendered code { color: var(--mt-code-fg) !important; }
+  .print .markdown-rendered h1 { color: var(--mt-h1-color) !important; }
+  .print .markdown-rendered h2 { color: var(--mt-h2-color) !important; }
+  .print .markdown-rendered h3 { color: var(--mt-h3-color) !important; }
+  .print .markdown-rendered h4 { color: var(--mt-h4-color) !important; }
+  .print .markdown-rendered h5 { color: var(--mt-h5-color) !important; }
+  .print .markdown-rendered h6 { color: var(--mt-h6-color) !important; }
+}
