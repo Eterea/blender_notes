@@ -40,7 +40,7 @@ This is pre-installed in 5.x
 
 [Data-Block Utilities](https://extensions.blender.org/add-ons/datablock-utils/) - Show users, merge duplicates, find similar, and more - Go to Properties ‣ Scene > **Similar & Duplicates** / **Data-Block Users**
 
-[Dimensions in Edit Mode](https://extensions.blender.org/add-ons/editmode-dimensions/) - Allows previewing and editing the dimensions of currently selected geometry in edit mode, just like in object mode
+[Dimensions in Edit Mode](https://extensions.blender.org/add-ons/editmode-dimensions/) - Allows previewing and editing the dimensions of currently selected geometry in edit mode, just like in object mode - 🟡 *- NOTE: this will be native in 5.3*
 
 [EasyWeight](https://extensions.blender.org/add-ons/easyweight/) - improvements for weight painting - [Easy Weight Documentation](https://studio.blender.org/tools/addons/easy_weight)
 
@@ -355,7 +355,7 @@ To update ([steps](https://ke-code.xyz/scripts/wiki.html)) - To avoid potential 
 
 [Higgsas Blender Geometry Nodes Groups Toolset Pack](https://higgsas.gumroad.com/l/wrusot) - *USD 10* - [Manual 0.1 documentation](https://higgsas-geo-nodes-manual.readthedocs.io/en/latest/) - (Higgsas) Geometry Nodes Groups Blender 3.3/4.4 - Tutorials, Tips and Tricks at [Blender Artists Community.](https://blenderartists.org/t/higgsas-geometry-nodes-groups-blender-3-3-4-4/1351737)
 
-[Geometry Nodes Building Blocks Toolkit](https://shmueldisrl.gumroad.com/l/pxpdx?layout=profile) - *USD 10* - By Shmuel Israel - Functionality you wouldn't get with only the built-in nodes. They will cover most basic node types to create most average node structures one step above the default.
+[Geometry Nodes Building Blocks Toolkit](https://shmueldisrl.gumroad.com/l/pxpdx?layout=profile) - *USD 10* - By Shmuel Israel - Functionality you wouldn't get with only the built-in nodes. They will cover most basic node types to create most average node structures one step above the default - 🟠
 
 [PatternMaker](https://blendermarket.com/products/patternmaker/) *USD 10* - “Almost” like having Substance Designer inside Blender - [Docs](https://blendermarket.com/products/patternmaker/docs)
 
