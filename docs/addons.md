@@ -314,7 +314,7 @@ To update ([steps](https://ke-code.xyz/scripts/wiki.html)) - To avoid potential 
 
 [Taz site](https://tazee.github.io/) - Great Japanese developer coming from Modo
 
-[YT-Tools](https://tazaki.gumroad.com/l/gamki) - *USD 20* - To enhance modeling workflow, especially for users familiar with Modo - *Remember to disable custom keymaps* - [Documentation](https://tazee.github.io/yt-tools/)
+[YT-Tools](https://tazaki.gumroad.com/l/gamki) - *USD 20* - To enhance modeling workflow, especially for users familiar with Modo - *Remember to disable custom keymaps* - [Documentation](https://tazee.github.io/yt-tools/) - 🟠
 
 [Attribute Manager](https://tazaki.gumroad.com/l/wirsjp?layout=profile) - From USD 20 to *USD 15* with launch discount - Spreadsheet-style attribute editing - [Documentation](https://tazee.github.io/AttributeManager/)
 
